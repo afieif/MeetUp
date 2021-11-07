@@ -6,7 +6,6 @@ export default function LocationInput(props) {
     const [lt, setlt] = useState(0.0);
     const [ln, setln] = useState(0.0);
     const [countEntries, setCountEntries] = useState(0);
-    const REACT_APP_API_KEY="b9e94c45b6108b84f7fe745ab960cf8a";
 
     const Style = 
     {
@@ -34,14 +33,14 @@ export default function LocationInput(props) {
     }
 
     const fetchData = async (query) => {
-        const response = await fetch("http://api.positionstack.com/v1/forward?access_key="+REACT_APP_API_KEY+"&query="+query+"&limit=1");
+        const response = await fetch("http://api.positionstack.com/v1/forward?access_key=b9e94c45b6108b84f7fe745ab960cf8a&query="+query+"&limit=1");
         const data = await response.json();
         return getCords(data);
             }
 
     const fetchPlace = async (query) => {
         console.log(query);
-        const response = await fetch("http://api.positionstack.com/v1/reverse?access_key="+REACT_APP_API_KEY+"&query="+query+"&limit=1");
+        const response = await fetch("http://api.positionstack.com/v1/reverse?access_key=b9e94c45b6108b84f7fe745ab960cf8a&query="+query+"&limit=1");
         const data = await response.json();
         let label = data.data[0].label
         setTimeout(() => props.transferLabel(label),0);
