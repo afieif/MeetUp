@@ -1,4 +1,6 @@
-# Getting Started with Create React App
+## A web app which helps you decide where you and your friends should meet up based on their locations
+
+### Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
