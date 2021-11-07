@@ -30,11 +30,6 @@ export default function LocationInput(props) {
             display : "inline",
             padding : 10,
         },
-        "@media screen and (max-width: 800px)" : {
-            card : {
-                backgroundColor:"#f3f3",
-            },
-        }
     }
 
     const fetchData = async (query) => {
@@ -42,13 +37,13 @@ export default function LocationInput(props) {
         const data = await response.json();
         return getCords(data);
             }
+
     const fetchPlace = async (query) => {
         console.log(query);
         const response = await fetch("http://api.positionstack.com/v1/reverse?access_key="+process.env.REACT_APP_API_KEY+"&query="+query+"&limit=1");
         const data = await response.json();
         let label = data.data[0].label
         setTimeout(() => props.transferLabel(label),0);
-
             }
 
     function getCords(data){

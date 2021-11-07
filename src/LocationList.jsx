@@ -1,3 +1,4 @@
+import { Button } from "@material-ui/core";
 import React from "react";
 
   
@@ -8,24 +9,29 @@ import React from "react";
         card : {
             backgroundColor:"#f3f3f5",
             display : "inline-block",
-            width : "71%",
+            width : "40%",
             padding : 20,
             paddingRight : 0,
             marginTop: 20,
-            marginLeft : "15%",
-            marginRight : "12%",
+            marginLeft : "30%",
+            marginRight : "30%",
             marginBottom : 10,
             borderRadius : 16,
             elevation : 10,
         },
+        btn : {
+          marginLeft : "50%"
+        }
     }
 
     function ListItem(props) {
-        return <li style={Style.card}>{props.value}</li>;
+        return <li style={Style.card}>{props.value} 
+        {/* <Button color="secondary" variant="contained" style={Style.btn}>Delete</Button> */}
+        </li>;
       }
 
-    const objs = props.data;
-    const listItems = objs.map((data) =>
+    const place = props.data;
+    const listItems = place.map((data) =>
       <ListItem key={data.label} value={data.label}/>
     );
     return (
