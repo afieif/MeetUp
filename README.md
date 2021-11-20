@@ -1,4 +1,4 @@
-## A web app which helps you decide where you and your friends should meet up based on their locations
+# React JS app to help you decide where to hangout based on your location
 
 ### Getting Started with Create React App
 
