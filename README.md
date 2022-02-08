@@ -1,5 +1,5 @@
-## A web app which helps you decide where you and your friends should meet up based on their locations
-
+# React JS app to help you decide where to hangout based on your location
+## Video demo is available <a href="https://www.linkedin.com/posts/afieif_reactjs-project-ugcPost-6863182910934061056-exTg">here</a>
 ### Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
